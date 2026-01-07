@@ -20,6 +20,7 @@ public class RobotPlayer {
     @SuppressWarnings("unused")
     public static void run(RobotController rc) throws GameActionException {
         RobotPlayer.rc = rc;
+        //Why are we seeding ID? I thought all bots have turns when going through the code
         rng.setSeed(rc.getID()); // Seeding with ID ensures deterministic behavior per bot
 
         while (true) {
